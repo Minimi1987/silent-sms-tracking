@@ -5,33 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Edge",
-            "request": "launch",
-            "type": "msedge",
-            "url": "http://localhost:8080",
-            "webRoot": "
-        
-        ${workspaceFolder}"    "
-        },
-        {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "runtimeExecutable": "node"
-            ],
-            "type": "node"
-        },
-
-        {
-            "command": "npm start",
-            "name": "Run npm start",
-            "request": "launch",
-            "type": "node-terminal"
-        },
-        {
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
@@ -39,26 +12,14 @@
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"
             ],
-            "preLaunchTask": "npm: install",
+            "preLaunchTask": "npm",
             "request": "launch",
             "type": "extensionHost"
         },
         {
-            "command": "npm start",
-            "name": "Run npm start",
-            "request": "launch",
-            "type": "node-terminal"
-        },
-        {
-            "type": "java",
-            "request": "attach",
-            "name": "Java",
-            "port": 5005,
-            "sourceRoots": []
-        },
-        {
             "name": "Launch Program",
-            "program": "${workspaceFolder}/index.js",
+            "program": "${workspaceFolder}/
+            ",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
@@ -66,41 +27,20 @@
             "type": "node"
         },
         {
-            "type": "cmake",
-            "request": "launch",
-            "name": "CMake: Externally launched",
-            "cmakeDebugType": "external",
-            "pipeName": "<...>"
-        },
-
-
-
-        {
-            "name": "Python Debugger: Current File",
+            "name": "Python Debugger: Django",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
+            "args": [
+                "runserver"
             ],
-            "type": "node"
+            "django": true,
+            "autoStartBrowser": false,
+            "program": "${workspaceFolder}\\main.py"
         },
         {
-            "command": "npm start",
-            "name": "Run npm start",
+            "name": "Launch Edge",
             "request": "launch",
-            "type": "node-terminal"
-        },
-        {
-            "name": "Launch Chrome",
-            "request": "launch",
-            "type": "chrome",
+            "type": "msedge",
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         },
@@ -111,13 +51,99 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            "runtimeExecutable": "node"
+        ],
+        "runtimeExecutable": "node"{
+            "command": "npm start",
+            "name": "Run npm start",
+            {
+                "command": "npm start",
+                "name": "Run npm start",
+                "request": "launch",
+                "type": "node-terminal"
+            }
+        ],
+        "name": "Launch Extension",
+        "outFiles": [
+            "${workspaceFolder}/out/**/*.js"
+        ],
+        "preLaunchTask": "npm: install",
+        "request": "launch",
+        "type": "extensionHost"
+    },
+    {
+        "command": "npm start",
+        "name": "Run npm start",
+        "request": "launch",
+        "type": "node-terminal"
+    },
+    {
+        "type": "java",
+        "request": "attach",
+        "name": "Java",
+        "port": 5005,
+        "sourceRoots": []
+    },
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/index.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node"
+    },
+    {
+        "type": "cmake",
+        "request": "launch",
+        "name": "CMake: Externally launched",
+        "cmakeDebugType": "external",
+        "pipeName": "<...>"
+    },
+    {
+        "name": "Python Debugger: Current File",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal"
+    },
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/app.js",
+        {
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "type": "node"
-        },
+        }
+            "request": "launch",
+        "type": "node-terminal"
+    },
+    {
+        "name": "Launch Chrome",
+        "request": "launch",
+        "type": "chrome",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}"
+    },
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/app.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node"
+    },
+    {
+        "type": "java",
+        "name": "Launch Java Program",
         {
             "type": "java",
             "name": "Launch Java Program",
             "request": "launch",
-            "mainClass": ""
+            "mainClass": "com.example.Main"
         }
-        ]
-    }
